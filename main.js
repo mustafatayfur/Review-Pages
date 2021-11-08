@@ -35,7 +35,7 @@ const country = document.getElementById("country");
 const bio = document.getElementById("card-text");
 const buttonPrev = document.querySelector(".button-previous");
 const buttonNext = document.querySelector(".button-next");
-const buttonRand = document.querySelector(".btn btn-primary");
+const buttonRand = document.querySelector(".btn-random");
 
 
 let currentItem = 0;
