@@ -1,4 +1,4 @@
-const leaders = [
+const scientists = [
     {
       id: 1,
       name: 'Cahit Arf',
@@ -25,6 +25,56 @@ const leaders = [
       name: 'Bolzano',
       country: 'Czechoslovakia',
       img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/BBolzano.jpg/1200px-BBolzano.jpg',
-      text: "Bolzano was a Czech philosopher of Italian origin. He was also a good logician and a very good mathematician. Bolzano was accused of more rationalism in 1820. He had a philosophy and thought based on mathematics. Therefore, he opposed Kant's idealism. After 1805 he taught philosophy of religion at the University of Prague. In mathematics, he worked on infinity and infinitesimal calculus. His book "Paradoxes of Eternity' was published in 1851. He has also worked on point clusters."
+      text: "Bolzano was a Czech philosopher of Italian origin. He was also a good logician and a very good mathematician. Bolzano was accused of more rationalism in 1820. He had a philosophy and thought based on mathematics. Therefore, he opposed Kant's idealism. After 1805 he taught philosophy of religion at the University of Prague. In mathematics, he worked on infinity and infinitesimal calculus. His book \"Paradoxes of Eternity\" was published in 1851. He has also worked on point clusters."
     },
   ];
+
+const img= document.querySelector("#person-img");
+const scientist= document.querySelector(".card-title");
+const country = document.getElementById("country");
+const bio = document.getElementById("card-text");
+const buttonPrev = document.querySelector(".button-previous");
+const buttonNext = document.querySelector(".button-next");
+const buttonRand = document.querySelector(".btn btn-primary");
+
+
+let currentItem = 0;
+
+window.addEventListener("DOMContentLoaded", function(){
+    const item = scientists[currentItem];
+    img.src = item.img;
+    scientist.textContent =  item.name;
+    country.textContent = item.country;
+    bio.textContent = item.text;
+
+});
+
+function displayScientist(person){
+    const item = scientists[person];
+    img.src = item.img;
+    scientist.textContent = item.name;
+    country.textContent = item.country;
+    bio.textContent = item.text;
+}
+
+buttonPrev.addEventListener('click', function(){
+    currentItem--;
+    if(currentItem < 0){
+        currentItem = scientists.length -1
+    }
+    displayScientist(currentItem);
+});
+buttonNext.addEventListener('click', function(){
+    currentItem++;
+    if(currentItem > scientists.length -1){
+        currentItem = 0;
+    }
+    displayScientist(currentItem);
+});
+
+buttonRand.addEventListener('click', function(){
+    currentItem = Math.floor(Math.random() * scientists.length);
+    displayScientist(currentItem);
+});
+
+
