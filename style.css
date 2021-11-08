@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background: hsl(205, 100%, 98%);
+    color: hsl(209, 61%, 16%);
+    line-height: 1.5;
+    font-size: 0.875rem;
+}
 #container{
     display: flex;
     flex-direction: column;
@@ -21,13 +27,61 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+    background: #ffffff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    border-radius: 10%;
+    width: 500px;
     padding: 1.5rem 2rem;
 
 }
 #person-img{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
+    margin-bottom: 25px;
+    
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#country{
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    color: hsl(205, 25%, 57%);
+    font-size: 0.85rem;
+    font-weight: bolder;    ;
+}
+.button-previous,
+.button-next {
+color: hsl(211, 27%, 70%);;
+font-size: 1.25rem;
+background: transparent;
+border-color: transparent;
+margin: 0 0.5rem;
+transition: $transition;
+cursor: pointer;
+}
+.button-previous:hover,
+.button-next:hover{
+    color: hsl(205, 78%, 60%);
+}
+.btn-random {
+    margin-top: 0.5rem;
+    background: hsl(205, 100%, 96%);
+    color: hsl(205, 78%, 60%);
+    padding: 0.25rem 0.5rem;
+    text-transform: capitalize;
+    border-radius: 10px;
+   
+    border-color: hsl(205, 80%, 31%);
+    cursor: pointer;
+    font-weight: bold;
+}
+.btn-random:hover {
+    background-color: hsl(205, 80%, 31%);
+    color: #fff;
 }
