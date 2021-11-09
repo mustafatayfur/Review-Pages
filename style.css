@@ -95,3 +95,10 @@ cursor: pointer;
     background-color: hsl(205, 80%, 31%);
     color: #fff;
 }
+
+@media screen and (max-width:430px) {
+    #main{
+        width: 340px;
+    }
+    
+}
